@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="#7593af">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="60dp"
+                android:foregroundGravity="center_horizontal"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cerveza" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="340dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:layout_constraintVertical_bias="0.666" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Pablo Cesar López Perezchica"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:gravity="center_horizontal|center_vertical"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/acercade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <ImageButton
+            android:id="@+id/favs"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#476f95"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_favorite_24"/>
+
+        <ImageButton
+            android:id="@+id/favsi"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#476f95"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_person_pin_24"/>
+
+        <ImageButton
+            android:id="@+id/favsa"
+            android:layout_weight="1"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#476f95"
+            android:src="@drawable/ic_baseline_settings_24"/>
+
+        <ImageButton
+            android:id="@+id/favsas"
+            android:layout_weight="1"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#476f95"
+            android:src="@drawable/ic_baseline_payment_24"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/acercade"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#86A8C8"
+        android:drawableLeft="@drawable/ic_baseline_format_list_bulleted_24"
+        android:gravity="bottom"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/purple_700"
+        android:text="@string/acercadenosotros"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <Button
+        android:id="@+id/Salir"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FF0000"
+        android:drawableLeft="@drawable/ic_baseline_card_giftcard_24"
+        android:gravity="bottom"
+        android:onClick="vlogin"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/purple_700"
+        android:text="@string/salir"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.929" />
+
+    <Button
+        android:id="@+id/feedback"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#86A8C8"
+        android:drawableLeft="@drawable/ic_baseline_feedback_24"
+        android:gravity="bottom"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/purple_700"
+        android:text="@string/feedback"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.669" />
+
+    <Button
+        android:id="@+id/ayuda"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#86A8C8"
+        android:drawableLeft="@drawable/ic_baseline_help_24"
+        android:gravity="bottom"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/purple_700"
+        android:text="@string/ayuda"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <Button
+        android:id="@+id/orders"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#86A8C8"
+        android:drawableLeft="@drawable/ic_baseline_card_giftcard_24"
+        android:gravity="bottom"
+        android:paddingHorizontal="10dp"
+        android:shadowColor="@color/purple_700"
+        android:text="@string/mis_pedidos"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.406" />
+
+    `
+
+</androidx.constraintlayout.widget.ConstraintLayout>
