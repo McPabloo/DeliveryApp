@@ -41,4 +41,7 @@
     <string name="tequilas">Tequilas</string>
     <string name="botanas">Botanas</string>
     <string name="ron">Ron</string>
+    <string name="victoria">Cerveza Victoria</string>
+    <string name="modelo_esp">Cerveza Modelo Esp</string>
+    <string name="modelo_osc">Cerveza Modelo Osc</string>
 </resources>
