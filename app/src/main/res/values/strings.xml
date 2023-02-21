@@ -34,14 +34,33 @@
     <string name="feedback">FeedBack</string>
     <string name="favs">Favoritos</string>
     <string name="cervezas">Cervezas</string>
-    <string name="cerveza_corona">Cerveza Corona</string>
+    <string name="cerveza_corona">Corona</string>
     <string name="_18_00">$ 18.00</string>
     <string name="a_adir">añadir</string>
     <string name="m_s">Más...</string>
     <string name="tequilas">Tequilas</string>
     <string name="botanas">Botanas</string>
     <string name="ron">Ron</string>
-    <string name="victoria">Cerveza Victoria</string>
-    <string name="modelo_esp">Cerveza Modelo Esp</string>
-    <string name="modelo_osc">Cerveza Modelo Osc</string>
+    <string name="victoria">Victoria</string>
+    <string name="modelo_esp">Modelo Especial</string>
+    <string name="modelo_osc">Modelo Negra</string>
+    <string name="miperfil">Mi Perfil</string>
+    <string name="eslogan">Disfrita de lo mejor de la fiesta sin tener que salir de casa</string>
+    <string name="saludoholamiperfil">Hola de nuevo!</string>
+    <string name="preferencias">Preferencias</string>
+    <string name="cont_ctanos">Contáctanos</string>
+    <string name="m_todo_de_pago">Método de Pago</string>
+    <string name="title_activity_usuario_card">usuarioCardAct</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="volver">Volver</string>
+    <string name="numtarj">Número de Tarjeta</string>
+    <string name="cvv">CVV</string>
+    <string name="expdate">Fecha de Expiración</string>
 </resources>

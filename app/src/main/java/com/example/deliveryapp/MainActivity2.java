@@ -68,4 +68,7 @@ private ActivityMain2Binding binding;
         Intent intent = new Intent(this, LoginActivity.class);
         this.startActivity(intent);
     }
+
+
+
 }
