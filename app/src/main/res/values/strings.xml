@@ -62,4 +62,9 @@
     <string name="numtarj">Número de Tarjeta</string>
     <string name="cvv">CVV</string>
     <string name="expdate">Fecha de Expiración</string>
+    <string name="contactanos">Contáctanos</string>
+    <string name="nombre">Tu nombre</string>
+    <string name="asunto">Estoy interesado en...</string>
+    <string name="mensaje">Tu mensaje</string>
+    <string name="enviar">Enviar</string>
 </resources>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -12,10 +13,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.deliveryapp.R;
+import com.example.deliveryapp.contactoActivity;
 import com.example.deliveryapp.databinding.FragmentGalleryBinding;
 import com.example.deliveryapp.ui.slideshow.UserCreditAct;
-import com.example.deliveryapp.ui.slideshow.userCredirAct;
 import com.example.deliveryapp.ui.slideshow.userProfileAct;
+
 
 public class GalleryFragment extends Fragment implements View.OnClickListener {
 
@@ -35,6 +37,9 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         ImageButton BOTON2 = (ImageButton) root.findViewById(R.id.btntarjeta);
         BOTON2.setOnClickListener(this);
 
+        Button BOTON3 = (Button) root.findViewById(R.id.btncontacto);
+        BOTON3.setOnClickListener(this);
+
         return root;
     }
 
@@ -48,6 +53,10 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
             case R.id.btntarjeta:
                 Intent intent1 = new Intent(getActivity(), UserCreditAct.class);
                 startActivity(intent1);
+                break;
+            case R.id.btncontacto:
+                Intent intent2 = new Intent(getActivity(), contactoActivity.class);
+                startActivity(intent2);
                 break;
             default:
                 break;
