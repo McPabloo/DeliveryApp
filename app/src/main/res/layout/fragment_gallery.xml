@@ -71,10 +71,10 @@
     <LinearLayout
         android:layout_width="370dp"
         android:layout_height="60dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:weightSum="4"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/acercade"
+        app:layout_constraintBottom_toTopOf="@+id/btnacercade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
@@ -83,33 +83,33 @@
             android:id="@+id/favs"
             android:layout_width="20dp"
             android:layout_height="match_parent"
-            android:backgroundTint="#476f95"
             android:layout_weight="1"
-            android:src="@drawable/ic_baseline_favorite_24"/>
+            android:backgroundTint="#476f95"
+            android:src="@drawable/ic_baseline_favorite_24" />
 
         <ImageButton
             android:id="@+id/favsi"
             android:layout_width="20dp"
             android:layout_height="match_parent"
-            android:backgroundTint="#476f95"
             android:layout_weight="1"
-            android:src="@drawable/ic_baseline_person_pin_24"/>
+            android:backgroundTint="#476f95"
+            android:src="@drawable/ic_baseline_person_pin_24" />
 
         <ImageButton
             android:id="@+id/favsa"
-            android:layout_weight="1"
             android:layout_width="20dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:backgroundTint="#476f95"
-            android:src="@drawable/ic_baseline_settings_24"/>
+            android:src="@drawable/ic_baseline_settings_24" />
 
         <ImageButton
             android:id="@+id/btntarjeta"
-            android:layout_weight="1"
             android:layout_width="20dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:backgroundTint="#476f95"
-            android:src="@drawable/ic_baseline_payment_24"/>
+            android:src="@drawable/ic_baseline_payment_24" />
 
 
     </LinearLayout>
