@@ -115,7 +115,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/acercade"
+        android:id="@+id/btnacercade"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:backgroundTint="#86A8C8"
