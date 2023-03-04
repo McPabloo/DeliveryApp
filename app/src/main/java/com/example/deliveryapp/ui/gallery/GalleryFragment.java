@@ -17,6 +17,7 @@ import com.example.deliveryapp.contactoActivity;
 import com.example.deliveryapp.databinding.FragmentGalleryBinding;
 import com.example.deliveryapp.ui.slideshow.UserCreditAct;
 import com.example.deliveryapp.ui.slideshow.acercadenosotrosActivity;
+import com.example.deliveryapp.ui.slideshow.ajustesActivity;
 import com.example.deliveryapp.ui.slideshow.userProfileAct;
 
 
@@ -44,6 +45,9 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
         Button BOTON4 = (Button) root.findViewById(R.id.btnacercade);
         BOTON4.setOnClickListener(this);
 
+        ImageButton BOTON5 = (ImageButton) root.findViewById(R.id.favsa);
+        BOTON5.setOnClickListener(this);
+
         return root;
     }
 
@@ -65,6 +69,10 @@ public class GalleryFragment extends Fragment implements View.OnClickListener {
             case R.id.btnacercade:
                 Intent intent3 = new Intent(getActivity(), acercadenosotrosActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.favsa:
+                Intent intent4 = new Intent(getActivity(), ajustesActivity.class);
+                startActivity(intent4);
                 break;
             default:
                 break;
