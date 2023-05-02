@@ -62,10 +62,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comentario"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.487" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -85,13 +85,13 @@
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="188dp"
+        android:layout_width="289dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="160dp"
         android:background="#FAF9F2"
         android:backgroundTint="@color/ic_launcher_background"
         app:layout_constraintBottom_toTopOf="@+id/enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comentario"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintVertical_bias="0.664" />
 </androidx.constraintlayout.widget.ConstraintLayout>
