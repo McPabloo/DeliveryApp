@@ -69,6 +69,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="370dp"
         android:layout_height="60dp"
         android:gravity="center_horizontal"
