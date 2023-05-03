@@ -20,10 +20,6 @@
             android:name=".CarritoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.login.ValoraActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_valora2" />
-        <activity
             android:name=".ui.slideshow.ajustesActivity"
             android:exported="false" />
         <activity
