@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="permisos_de_ubicaci_n">Permisos de Ubicaciòn</string>
-    <string name="abrir_facebook">Abrir FaceBook</string>
-    <string name="abrir_instagram">Abrir Instagram</string>
-    <string name="activar_sonido_de_notificaciones">Activar Sonido de Notificaciones</string>
-    <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="permisos_de_ubicaci_n">Enable location</string>
+    <string name="abrir_facebook">Open FaceBook</string>
+    <string name="abrir_instagram">Open Instagram</string>
+    <string name="activar_sonido_de_notificaciones">Enable Notifications sound</string>
+    <string name="modo_oscuro">Dark Mode</string>
+    <string name="permitir_notificaciones">Enable Notifications</string>
 </resources>

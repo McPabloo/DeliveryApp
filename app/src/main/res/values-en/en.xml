@@ -72,10 +72,4 @@
     <string name="quienessomos">We are into people security above all. we believe there is nothing bad with partying, but always being safe.</string>
     <string name="ajustes">Settings</string>
     <string name="iniciar">Enter</string>
-    <string name="permisos_de_ubicaci_n">Enable location</string>
-    <string name="abrir_facebook">Open FaceBook</string>
-    <string name="abrir_instagram">Open Instagram</string>
-    <string name="permitir_notificaciones">Enable notifications</string>
-    <string name="activar_sonido_de_notificaciones">Enable notifications sound</string>
-    <string name="modo_oscuro">Dark Mode</string>
 </resources>
