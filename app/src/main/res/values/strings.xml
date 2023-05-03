@@ -9,18 +9,18 @@
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Perfil</string>
     <string name="menu_slideshow">Favoritos</string>
-    <string name="nomas_una">Los Mandaderos</string>
+    <string name="nomas_una">Nomás Una</string>
     <string name="entrar">Entrar</string>
-    <string name="username">Usuario</string>
-    <string name="password">Contraseña</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
     <string name="volver_al_inicio">volver al inicio</string>
     <string name="registrarme">Registrarme</string>
-    <string name="confirm_password">Confirmar Contraseña</string>
+    <string name="confirm_password">Confirm password</string>
     <string name="email">Email</string>
-    <string name="phone">Teléfono</string>
+    <string name="phone">Phone</string>
     <string name="inicioregistro">Ya tienes tu nueva cuenta!</string>
     <string name="title_activity_main2">MainActivity2</string>
-    <string name="logout">Salir</string>
+    <string name="logout">logout</string>
     <string name="perfil">Perfil</string>
     <string name="salir">Salir</string>
     <string name="inicio">Inicio</string>
@@ -70,11 +70,4 @@
     <string name="qui_nes_somos">¿Quiénes Somos?</string>
     <string name="quienessomos">En Los Mandaderos estamos comprometidos con la seguridad de todas las personas. Creemos que no hay nada de malo con la fiesta, el alcohol y el pasarla bien, sin embargo, para la comidad de todos y todas las personas, hemos decidio brindar un servicio de delivery de bebidas y botanas de tu preferencia, para que no tengas que exponerte ni a los demás a ningún peligro, y puedas continuar con tu fiesta sin tener mayor preocupación.</string>
     <string name="ajustes">Ajustes</string>
-    <string name="iniciar">Entrar</string>
-    <string name="permisos_de_ubicaci_n">Permisos de Ubicaciòn</string>
-    <string name="abrir_facebook">Abrir FaceBook</string>
-    <string name="abrir_instagram">Abrir Instagram</string>
-    <string name="permitir_notificaciones">Permitir Notificaciones</string>
-    <string name="activar_sonido_de_notificaciones">Activar Sonido de Notificaciones</string>
-    <string name="modo_oscuro">Modo Oscuro</string>
 </resources>

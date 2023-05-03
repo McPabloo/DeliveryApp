@@ -35,6 +35,14 @@
                 android:src="@drawable/cerveza" />
         </androidx.cardview.widget.CardView>
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="98dp"
+            android:layout_height="66dp"
+            android:text="Atras"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="18dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
