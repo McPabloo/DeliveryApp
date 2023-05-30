@@ -5,10 +5,12 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"
+        android:onClick="sett"
         android:icon="@drawable/ic_baseline_settings_24"/>
 
     <item android:id="@+id/profile"
         android:title="@string/perfil"
+        android:onClick="profile"
         android:orderInCategory="200"
         app:showAsAction="never" />
 

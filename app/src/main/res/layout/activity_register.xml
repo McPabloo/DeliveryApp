@@ -34,6 +34,7 @@
         android:id="@+id/editText"
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:visibility="invisible"
         android:layout_marginTop="100dp"
         android:background="@drawable/custombutton"
         android:gravity="center"
@@ -47,12 +48,13 @@
         android:id="@+id/editTextz"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/custombutton"
         android:gravity="center"
         android:hint="@string/password"
         android:textColorHint="#FFFBF6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextz2" />
 
@@ -76,24 +78,12 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/custombutton"
         android:gravity="center"
+        android:visibility="invisible"
         android:hint="@string/phone"
         android:textColorHint="#FFFBF6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextz3" />
-
-    <EditText
-        android:id="@+id/editTextz1"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/custombutton"
-        android:gravity="center"
-        android:hint="@string/confirm_password"
-        android:textColorHint="#FFFBF6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextz" />
 
     <Button
         android:id="@+id/btn_splash2"
@@ -107,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextz1" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextz2" />
 
     <Button
         android:id="@+id/textView4"

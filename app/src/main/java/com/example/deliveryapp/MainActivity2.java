@@ -2,18 +2,23 @@ package com.example.deliveryapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.deliveryapp.databinding.ActivityMain2Binding;
+import com.example.deliveryapp.ui.slideshow.ajustesActivity;
+import com.example.deliveryapp.ui.slideshow.userProfileAct;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -65,8 +70,22 @@ private ActivityMain2Binding binding;
     }
 
     public void backlogin(MenuItem item) {
+        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, LoginActivity.class);
         this.startActivity(intent);
+        finish();
+    }
+
+    public void sett(MenuItem item) {
+        Intent intent = new Intent(this, ajustesActivity.class);
+        this.startActivity(intent);
+        finish();
+    }
+
+    public void profile(MenuItem item) {
+        Intent intent = new Intent(this, userProfileAct.class);
+        this.startActivity(intent);
+        finish();
     }
 
 

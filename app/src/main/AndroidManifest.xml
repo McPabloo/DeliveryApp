@@ -14,12 +14,6 @@
         android:theme="@style/Theme.DeliveryApp"
         tools:targetApi="31">
         <activity
-            android:name=".PagarCarritoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CarritoActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.slideshow.ajustesActivity"
             android:exported="false" />
         <activity

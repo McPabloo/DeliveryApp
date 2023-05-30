@@ -36,7 +36,7 @@
     <string name="cerveza_corona">Corona</string>
     <string name="_18_00">$ 18.00</string>
     <string name="a_adir">añadir</string>
-    <string name="m_s">Más...</string>
+    <string name="m_s">Más…</string>
     <string name="tequilas">Tequilas</string>
     <string name="botanas">Botanas</string>
     <string name="ron">Ron</string>
@@ -70,4 +70,12 @@
     <string name="qui_nes_somos">¿Quiénes Somos?</string>
     <string name="quienessomos">En Los Mandaderos estamos comprometidos con la seguridad de todas las personas. Creemos que no hay nada de malo con la fiesta, el alcohol y el pasarla bien, sin embargo, para la comidad de todos y todas las personas, hemos decidio brindar un servicio de delivery de bebidas y botanas de tu preferencia, para que no tengas que exponerte ni a los demás a ningún peligro, y puedas continuar con tu fiesta sin tener mayor preocupación.</string>
     <string name="ajustes">Ajustes</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="permisos_de_ubicaci_n">Permitir Ubicación</string>
+    <string name="abrir_facebook">Abrir Facebook</string>
+    <string name="abrir_instagram">Abrir Instagram</string>
+    <string name="activar_sonido_de_notificaciones">Activar sonidos de notificaciones</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="permitir_notificaciones">Permitir Notificaciones</string>
+    <string name="carrito">Carrito</string>
 </resources>
