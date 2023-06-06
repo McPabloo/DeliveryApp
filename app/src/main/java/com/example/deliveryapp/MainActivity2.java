@@ -29,8 +29,11 @@ private ActivityMain2Binding binding;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
      binding = ActivityMain2Binding.inflate(getLayoutInflater());
      setContentView(binding.getRoot());
+
 
         setSupportActionBar(binding.appBarMain2.toolbar);
         binding.appBarMain2.fab.setOnClickListener(new View.OnClickListener() {

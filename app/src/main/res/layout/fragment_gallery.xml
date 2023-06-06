@@ -171,7 +171,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintVertical_bias="0.669" />
+        app:layout_constraintVertical_bias="0.562" />
 
     <Button
         android:id="@+id/ayuda"
@@ -190,26 +190,8 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintVertical_bias="0.414" />
 
-    <Button
-        android:id="@+id/orders"
-        android:layout_width="340dp"
-        android:layout_height="45dp"
-        android:backgroundTint="#86A8C8"
-        android:drawableLeft="@drawable/ic_baseline_card_giftcard_24"
-        android:gravity="bottom"
-        android:paddingHorizontal="10dp"
-        android:shadowColor="@color/purple_700"
-        android:text="@string/mis_pedidos"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintVertical_bias="0.406" />
 
     `
 
