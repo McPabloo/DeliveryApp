@@ -13,8 +13,8 @@
         android:foreground="@drawable/foreground_splash"
         android:scaleType="centerCrop"
         android:src="@drawable/cerveza"
-        tools:layout_editor_absoluteX="-34dp"
-        tools:layout_editor_absoluteY="60dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -27,7 +27,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:weightSum="4"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/editTxt_Card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -65,9 +65,9 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTxt_Card"
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="372dp"
         android:background="@drawable/custombutton"
         android:gravity="center"
@@ -81,39 +81,39 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/editTextz"
+        android:id="@+id/editTxt_Cvv"
         android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/custombutton"
         android:gravity="center"
-        android:textSize="20sp"
         android:hint="@string/cvv"
         android:textColorHint="#FFFBF6"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_Card"
         app:layout_constraintVertical_bias="0.044" />
 
     <EditText
-        android:id="@+id/editTextza"
+        android:id="@+id/editTxt_Date"
         android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:textSize="20sp"
+        android:layout_height="48dp"
         android:background="@drawable/custombutton"
         android:gravity="center"
         android:hint="@string/expdate"
         android:textColorHint="#FFFBF6"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_Card"
         app:layout_constraintVertical_bias="0.21" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_update"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_button"
@@ -124,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextza"
+        app:layout_constraintTop_toBottomOf="@+id/editTxt_Date"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
