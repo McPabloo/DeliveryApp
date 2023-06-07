@@ -1,16 +1,12 @@
 package com.example.deliveryapp;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 public class ContactRegisterModel {
-    private String id, name, interested, message;
+    String name, interested, message;
 
     public ContactRegisterModel() {
     }
 
-    public ContactRegisterModel(String id,String name, String interested, String message) {
-        this.id = id;
+    public ContactRegisterModel(String name, String interested, String message) {
         this.name = name;
         this.interested = interested;
         this.message = message;
@@ -38,11 +34,5 @@ public class ContactRegisterModel {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
     }
 }
