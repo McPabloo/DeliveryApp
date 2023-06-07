@@ -12,12 +12,12 @@
     <string name="nomas_una">Nomás Una</string>
     <string name="entrar">Entrar</string>
     <string name="username">Username</string>
-    <string name="password">Password</string>
+    <string name="password">Contraseña</string>
     <string name="volver_al_inicio">volver al inicio</string>
     <string name="registrarme">Registrarme</string>
     <string name="confirm_password">Confirm password</string>
     <string name="email">Email</string>
-    <string name="phone">Phone</string>
+    <string name="phone">Teléfono</string>
     <string name="inicioregistro">Ya tienes tu nueva cuenta!</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="logout">logout</string>
@@ -78,4 +78,5 @@
     <string name="modo_oscuro">Modo Oscuro</string>
     <string name="permitir_notificaciones">Permitir Notificaciones</string>
     <string name="carrito">Carrito</string>
+    <string name="direccion">Dirección</string>
 </resources>

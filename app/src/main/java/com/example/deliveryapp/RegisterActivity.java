@@ -87,6 +87,7 @@ public class RegisterActivity extends AppCompatActivity  {
                                     // Guardar el email en Realtime Database
                                     DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("users");
                                     databaseRef.child(user.getUid()).child("email").setValue(userEmail);
+                                    databaseRef.child(user.getUid()).child("address").setValue(Phone);
                                     // Continuar con el flujo de la aplicación
                                     Toast.makeText(RegisterActivity.this, "Authentication succeeded", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(RegisterActivity.this, MainActivity2.class);
