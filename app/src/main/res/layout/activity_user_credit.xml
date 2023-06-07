@@ -73,6 +73,7 @@
         android:gravity="center"
         android:hint="@string/numtarj"
         android:textColorHint="#FFFBF6"
+        android:textColor="#FFFBF6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +93,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
+        android:textColor="#FFFBF6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTxt_Card"
         app:layout_constraintVertical_bias="0.044" />
@@ -103,6 +105,7 @@
         android:background="@drawable/custombutton"
         android:gravity="center"
         android:hint="@string/expdate"
+        android:textColor="#FFFBF6"
         android:textColorHint="#FFFBF6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
