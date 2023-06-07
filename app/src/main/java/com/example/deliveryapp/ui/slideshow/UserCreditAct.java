@@ -29,8 +29,33 @@ import java.util.HashMap;
 public class UserCreditAct extends AppCompatActivity {
 
     EditText editTextCard, editTextCvv, editTextDate;
-    String M_ID;
-    FirebaseAuth firebaseAuth;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference userRef = database.getReference("users");
+    String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+    private void obtenerData() {
+        userRef.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                CreditModel creditModel = dataSnapshot.getValue(CreditModel.class);
+                if (creditModel != null) {
+                    String card = creditModel.getCard();
+                    String cvv = creditModel.getCvv();
+                    String date = creditModel.getDate();
+
+                    editTextCard.setText(card);
+                    editTextCvv.setText(cvv);
+                    editTextDate.setText(date);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e("Firebase", "Error al obtener los datos: " + databaseError.getMessage());
+            }
+        });
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,29 +66,6 @@ public class UserCreditAct extends AppCompatActivity {
         editTextCvv = findViewById(R.id.editTxt_Cvv);
         editTextDate = findViewById(R.id.editTxt_Date);
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        M_ID = firebaseAuth.getCurrentUser().getUid();
-
-        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(M_ID);
-        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    String card = dataSnapshot.child("card").getValue(String.class);
-                    String cvv = dataSnapshot.child("cvv").getValue(String.class);
-                    String date = dataSnapshot.child("date").getValue(String.class);
-
-                    editTextCard.setText(card);
-                    editTextCvv.setText(cvv);
-                    editTextDate.setText(date);
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getApplicationContext(), "Failed to read user data.", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         Button btnUpdate = findViewById(R.id.btn_update);
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,26 +75,27 @@ public class UserCreditAct extends AppCompatActivity {
                 String date = editTextDate.getText().toString();
 
                 if (!TextUtils.isEmpty(card) && !TextUtils.isEmpty(cvv)) {
-                    DatabaseReference updateRef = FirebaseDatabase.getInstance().getReference().child("users").child(M_ID);
+                    HashMap<String, Object> cardMap = new HashMap<>();
+                    cardMap.put("card", card);
+                    cardMap.put("cvv", cvv);
+                    cardMap.put("date", date);
 
-                    updateRef.child("card").setValue(card);
-                    updateRef.child("cvv").setValue(cvv);
-                    updateRef.child("date").setValue(date)
+                    userRef.child(uid).updateChildren(cardMap)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(getApplicationContext(), "Card updated", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        Toast.makeText(getApplicationContext(), "Failed to update card. Please try again.", Toast.LENGTH_SHORT).show();
-                                    }
+                                        Toast.makeText(getApplicationContext(), "Card added", Toast.LENGTH_SHORT).show();
+                                    } else
+                                        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
                                 }
                             });
                 } else {
-                    Toast.makeText(getApplicationContext(), "Please enter card number, CVV, and a valid date.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please enter name, message and interested", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        obtenerData();
     }
 
     public void regresarprofile(View view) {
