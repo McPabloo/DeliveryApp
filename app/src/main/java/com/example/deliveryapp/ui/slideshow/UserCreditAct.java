@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.deliveryapp.MainActivity2;
+import com.example.deliveryapp.Producto;
 import com.example.deliveryapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -35,54 +37,55 @@ public class UserCreditAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_credit);
 
-        editTextCard=findViewById(R.id.editTxt_Card);
-        editTextCvv=findViewById(R.id.editTxt_Cvv);
-        editTextDate=findViewById(R.id.editTxt_Date);
+        editTextCard = findViewById(R.id.editTxt_Card);
+        editTextCvv = findViewById(R.id.editTxt_Cvv);
+        editTextDate = findViewById(R.id.editTxt_Date);
 
         firebaseAuth = FirebaseAuth.getInstance();
         M_ID = firebaseAuth.getCurrentUser().getUid();
 
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("users").child(M_ID);
-        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(M_ID);
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChildren()) {
-                    if (dataSnapshot.child("card").exists())
-                        editTextCard.setText(dataSnapshot.child("card").getValue().toString());
-                    if (dataSnapshot.child("cvv").exists())
-                        editTextCvv.setText(dataSnapshot.child("cvv").getValue().toString());
-                    if (dataSnapshot.child("date").exists())
-                        editTextDate.setText(dataSnapshot.child("date").getValue().toString());
+                if (dataSnapshot.exists()) {
+                    String card = dataSnapshot.child("card").getValue(String.class);
+                    String cvv = dataSnapshot.child("cvv").getValue(String.class);
+                    String date = dataSnapshot.child("date").getValue(String.class);
+
+                    editTextCard.setText(card);
+                    editTextCvv.setText(cvv);
+                    editTextDate.setText(date);
                 }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "Failed to read user data.", Toast.LENGTH_SHORT).show();
             }
         });
 
-        Button btnUpadte = findViewById(R.id.btn_update);
-        btnUpadte.setOnClickListener(new View.OnClickListener() {
+        Button btnUpdate = findViewById(R.id.btn_update);
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("users").child(M_ID);
-                String cardReg = editTextCard.getText().toString();
-                String cvvReg = editTextCvv.getText().toString();
-                String DateRg = editTextDate.getText().toString();
+                String card = editTextCard.getText().toString();
+                String cvv = editTextCvv.getText().toString();
+                String date = editTextDate.getText().toString();
 
-                if (!TextUtils.isEmpty(cardReg) && !TextUtils.isEmpty(cvvReg)) {
-                    HashMap<String, Object> cardMap = new HashMap<>();
-                    cardMap.put("card", cardReg);
-                    cardMap.put("cvv", cvvReg);
-                    cardMap.put("date", DateRg);
+                if (!TextUtils.isEmpty(card) && !TextUtils.isEmpty(cvv)) {
+                    DatabaseReference updateRef = FirebaseDatabase.getInstance().getReference().child("users").child(M_ID);
 
-                    readRef.updateChildren(cardMap)
+                    updateRef.child("card").setValue(card);
+                    updateRef.child("cvv").setValue(cvv);
+                    updateRef.child("date").setValue(date)
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(getApplicationContext(), "Card updated", Toast.LENGTH_SHORT).show();
-                                    } else
+                                    } else {
                                         Toast.makeText(getApplicationContext(), "Failed to update card. Please try again.", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
                 } else {
